@@ -5,7 +5,7 @@ pipeline {
         stage('Check') {
             steps {
                 script {
-                    def repositoryURL = 'https://github.com/Vergilraven/ProxyPool.git'
+                    def repositoryURL = 'git@github.com:Vergilraven/ProxyPool.git'
                     def gitCommand = "git ls-remote ${repositoryURL}"
                     def result = sh(script: gitCommand, returnStatus: true)
 
@@ -25,8 +25,8 @@ pipeline {
             }
 
         }
+        // stage(调k8s接口)
+        // stage(发布服务)
+        // stage(自动传字典进去吧)
     }
 }
-// stage(调k8s接口)
-// stage(发布服务)
-// stage(自动传字典进去吧)
